@@ -1,0 +1,26 @@
+<div class="car-plate-container">
+  <div class="car-plate-input">
+    <div class="car-plate-input-item" #province (openKeyboardProvince)="openKeyboardProvince($event)">
+      <span class="input">
+        {{key0||'省'}}
+      </span>
+    </div>
+    <div class="car-plate-input-item" #provinceArea (openKeyboardString)="openKeyboardStringArea($event)">
+      <span class="input">
+        {{key1||' '}}
+      </span>
+    </div>
+    <div class="car-plate-detail" #code (openKeyboardString)="openKeyboardString($event)">
+      <span class="input" *ngFor="let item of list;index as i;">
+        {{item}}
+      </span>
+      <div class="car-plate-detail-tip">
+        <i class="iconfont icon-sanjiao"></i>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="car-plate-tip"></div>
+<div class="car-plate-content">
+  <ng-content></ng-content>
+</div>
